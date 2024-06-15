@@ -17,7 +17,7 @@ jobs:
   deploy:
     name: deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
 
     permissions:
       id-token: write # This is required for requesting the JWT
