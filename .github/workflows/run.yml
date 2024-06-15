@@ -29,6 +29,9 @@ jobs:
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
+        with:
+          version: 8.15.6
+          run_install: false
 
       - name: Get pnpm store directory
         shell: bash
@@ -53,7 +56,7 @@ jobs:
           key: nextjs-app-cache-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: pnpm install
+        run: corepack pnpm install
 
       - name: Run
         run: |
