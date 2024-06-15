@@ -56,7 +56,7 @@ jobs:
           key: nextjs-app-cache-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
-        run: corepack pnpm install
+        run: pnpm install
 
       - name: Run
         run: |
