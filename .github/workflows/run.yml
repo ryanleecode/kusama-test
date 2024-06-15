@@ -42,15 +42,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - uses: actions/cache@v4
-        name: ♻️ Restore nextjs-app related caches
-        with:
-          path: |
-            ${{ github.workspace }}/apps/web/.next/cache
-            ${{ github.workspace }}/.cache
-            ${{ github.workspace }}/**/tsconfig.tsbuildinfo
-          key: nextjs-app-cache-${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-
       - name: Install dependencies
         run: pnpm install
 
