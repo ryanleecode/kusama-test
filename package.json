@@ -8,7 +8,6 @@
     "prepare": "tshy"
   },
   "devDependencies": {
-    "@microsoft/api-extractor": "^7.47.0",
     "tshy": "^1.15.1",
     "typescript": "^5.5.0-beta"
   },
