@@ -27,7 +27,7 @@ const withLogsProvider = (input: ConnectProvider): ConnectProvider => {
   };
 };
 
-const smoldot = start({ maxLogLevel: 4 });
+const smoldot = start({ maxLogLevel: 8 });
 
 const chain = await smoldot.addChain({ chainSpec: ksmcc3 });
 const jsonRpcProvider = getSmProvider(chain);
